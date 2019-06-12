@@ -1,21 +1,121 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<div class="mdl-layout__container">
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
 
-<router-outlet></router-outlet>
+    <div class="qt-header mdl-layout__header mdl-layout__header--waterfall">
+      <div class="mdl-layout__header-row">
+        <span class="qt-title mdl-layout-title">
+        </span>
+        <!-- Add spacer, to align navigation to the right in desktop -->
+        <div class="qt-header-spacer mdl-layout-spacer"></div>
+
+        <!-- Navigation -->
+        <div class="qt-navigation-container">
+          <nav class="qt-navigation mdl-navigation">
+            <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Publishing</a>
+            <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Charges</a>
+            <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Duration</a>
+            <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Printing</a>
+            <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Marketing</a>
+            <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Authors</a>
+            <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Contact</a>
+          </nav>
+        </div>
+        <span class="qt-mobile-title mdl-layout-title">
+        </span>
+        <button class="qt-more-button mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="more-button">
+          <i class="material-icons">more_vert</i>
+        </button>
+        <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right mdl-js-ripple-effect" for="more-button">
+          <li disabled class="mdl-menu__item">Reviews</li>
+          <li class="mdl-menu__item">Portfolio</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="qt-drawer mdl-layout__drawer">
+      <span class="mdl-layout-title">
+        <img class="qt-logo-image" src="../assets/images/qtlogo.jpg">
+      </span>
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" href="">Publishing</a>
+        <a class="mdl-navigation__link" href="">Charges</a>
+        <a class="mdl-navigation__link" href="">Duration</a>
+        <a class="mdl-navigation__link" href="">Printing</a>
+        <a class="mdl-navigation__link" href="">Marketing</a>
+        <a class="mdl-navigation__link" href="">Authors</a>
+        <a class="mdl-navigation__link" href="">Contact</a>
+        <div class="qt-drawer-separator"></div>
+        <span class="mdl-navigation__link" href="">Resources</span>
+        <a class="mdl-navigation__link" href="">Portfolio</a>
+        <a class="mdl-navigation__link" href="">Reviews</a>
+        <div class="qt-drawer-separator"></div>
+        <span class="mdl-navigation__link" href="">Misc</span>
+        <a class="mdl-navigation__link" href="">Official blog</a>
+        <div class="qt-drawer-separator"></div>
+        <span class="mdl-navigation__link" href="">For Authors</span>
+        <a class="mdl-navigation__link" href="">Procedure</a>
+        <a class="mdl-navigation__link" href="">Writing Resources</a>
+      </nav>
+    </div>
+    <div class="qt-content mdl-layout__content"><a name="top"></a>
+      <div class="qt-be-together-section mdl-typography--text-center">
+        <div class="logo-font qt-slogan"> QT</div>
+        <div class="logo-font qt-sub-slogan">
+          Academic Publishing</div>
+      </div>
+      <app-procedure id="procedure"></app-procedure>
+      <app-fee id="fee"></app-fee>
+      <app-marketing id="marketing"></app-marketing>
+      <app-duration id="duration"></app-duration>
+      <app-printing id="printing"></app-printing>
+      <footer class="qt-footer mdl-mega-footer">
+        <div class="mdl-mega-footer--top-section">
+          <div class="mdl-mega-footer--left-section">
+
+            <button href="https://www.facebook.com/qtacademicpublishing"
+              class="fa fa-facebook mdl-mega-footer--social-btn"></button>
+            &nbsp;
+            <button class="fa fa-skype mdl-mega-footer--social-btn"></button>
+            &nbsp;
+            <button href="mailto:qtacademicpublishing@gmail.com"
+              class="fa fa-google mdl-mega-footer--social-btn"></button>
+          </div>
+          <div class="mdl-mega-footer--right-section">
+            <a class="mdl-typography--font-light" href="#top">
+              Back to Top
+              <i class="material-icons">expand_less</i>
+            </a>
+          </div>
+        </div>
+
+        <div class="mdl-mega-footer--middle-section">
+          <p class="mdl-typography--font-light">Quality Thoughts: © 2019</p>
+        </div>
+
+        <div class="mdl-mega-footer--bottom-section">
+          <a class="qt-link qt-link-menu mdl-typography--font-light" id="version-dropdown">
+            Contacts
+            <i class="material-icons">arrow_drop_up</i>
+          </a>
+          <ul class="mdl-menu mdl-js-menu mdl-menu--top-left mdl-js-ripple-effect" for="version-dropdown">
+            <li class="mdl-menu__item">Telephone</li>
+            <li class="mdl-menu__item">Email</li>
+            <li class="mdl-menu__item">Skype</li>
+          </ul>
+          <a class="qt-link qt-link-menu mdl-typography--font-light" id="developers-dropdown">
+            Portfolio
+            <i class="material-icons">arrow_drop_up</i>
+          </a>
+          <ul class="mdl-menu mdl-js-menu mdl-menu--top-left mdl-js-ripple-effect" for="developers-dropdown">
+            <li class="mdl-menu__item">Google Scholar</li>
+            <li class="mdl-menu__item">Youtube</li>
+          </ul>
+          <a class="qt-link mdl-typography--font-light" href="">Blog</a>
+          <a class="qt-link mdl-typography--font-light" href="">Privacy Policy</a>
+        </div>
+
+      </footer>
+    </div>
+    <div class="mdl-layout__obfuscator"></div>
+  </div>
+</div>
